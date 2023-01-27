@@ -1,0 +1,10 @@
+name: Update inputs
+on:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  nix-update:
+    uses: christianharke/flake-commons/.github/workflows/nix-update.yml@main
+    secrets:
+      CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
