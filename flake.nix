@@ -47,7 +47,7 @@
           default = self.packages.${system}.${name};
         });
 
-      overlays.x86_64-linux.default = final: prev: {
+      overlays.default = final: prev: {
         ${name} = self.packages.${prev.system}.default;
       };
 
